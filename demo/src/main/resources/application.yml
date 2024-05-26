@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: demo
+  datasource:
+    url: jdbc:oracle:thin:@//localhost:1521/SCDL
+    username: SCL
+    password: sclpass
+    driver-class-name: oracle.jdbc.driver.OracleDriver
