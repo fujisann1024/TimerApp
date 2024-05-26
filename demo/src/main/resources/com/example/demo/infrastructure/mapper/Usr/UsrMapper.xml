@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.infrastructure.mapper.Usr.UsrMapper">
+	<select id="selectUserById" resultType="com.example.demo.infrastructure.mapper.Usr.outDto.UsrOutDto">
+	SELECT
+	  USER_ID UserId
+	, USER_FIRST_NAME UserFirstName
+	, USER_LAST_NAME UserLastName
+	, PASSWORD Password
+	, LOGIN_MISS_COUNT LoginMissCount
+	, ACCOUNT_LOCK_FLG AccountLockFlg
+	, LOCK_START_DATE LockStartDate
+	, BIRTH_DAY BirthDay
+	, CREATE_DATE CreateDate
+	, CREATE_ID CreateId
+	, UPDATE_DATE UpdateDate
+	, UPDATE_ID UpdateId
+	FROM SCL.USR
+	WHERE USER_ID = #{userId}
+		
+	</select>
+</mapper>
